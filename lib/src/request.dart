@@ -55,7 +55,11 @@ class Request {
 
     if (reply != "") {
       Map responseDecode =
+<<<<<<< HEAD
           !reply.contains('{') ? {"csv": reply} : json.decode(reply);
+=======
+          reply.contains('{') ? {"csv": reply} : json.decode(reply);
+>>>>>>> 1fa4c73ea8c490c9abd03a1ffe345c64b3a287fe
 
       if (response.statusCode > 299 || response.statusCode < 200) {
         if (responseDecode.containsKey('error_description'))
