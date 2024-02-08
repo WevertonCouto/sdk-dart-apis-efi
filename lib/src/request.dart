@@ -54,7 +54,8 @@ class Request {
     String reply = await response.transform(utf8.decoder).join();
 
     if (reply != "") {
-      Map responseDecode = json.decode(reply);
+      Map responseDecode =
+          reply.contains('{') ? {"csv": reply} : json.decode(reply);
 
       if (response.statusCode > 299 || response.statusCode < 200) {
         if (responseDecode.containsKey('error_description'))
