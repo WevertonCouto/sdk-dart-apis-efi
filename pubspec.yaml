@@ -1,6 +1,6 @@
-name: efipay
+name: efipay_custom
 description: A dart library for integration with payment services provided by Efi.
-version: 1.0.3
+version: 1.0.0
 homepage: https://github.com/efipay/sdk-dart-apis-efi
 
 environment:
@@ -12,6 +12,7 @@ dependencies:
   pointycastle: ^3.2.0
   flutter:
     sdk: flutter
+  dio:
 
 dev_dependencies:
   test: ^1.17.1
